@@ -1,0 +1,31 @@
+{
+  "name": "KRNL Key System Bypass",
+  "description": "This extension is automatically bypassing waiting process for krnl key system.",
+  "author" : "Money Maker",
+  "version": "1.1",
+  "manifest_version": 3,
+  "icons": {
+      "16": "/icon/16.png",
+      "32": "/icon/32.png",
+      "48": "/icon/48.png",
+      "128": "/icon/128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.linkvertise.com/*",
+	"*://*.linkvertise.net/*",
+	"*://*.linkvertise.download/*",
+	"*://*.link-to.net/*",
+	"*://cdn.krnl.place/*"
+      ],
+      "js": ["main.js"]
+    }
+  ],
+  "permissions": [
+      "activeTab"
+  ],
+  "host_permissions": [
+      "https://www.google.com/*"
+  ]
+}
